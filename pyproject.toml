@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "python_function_search"
+version = "0.0.0"
+authors = [
+  { name="George Allaway", email="george.w.allaway@gmail.com" },
+]
+description = "A small example package"
+readme = "README.md"
+requires-python = ">=3.10"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[tool.setuptools]
+packages = ["python_function_search"]
+
+[project.urls]
+"Homepage" = "https://github.com/Allaway11/python-function-search"
+"Bug Tracker" = "https://github.com/Allaway11/python-function-search/issues"
+
+[project.scripts]
+hello-world = "python_function_search:hello_world"
