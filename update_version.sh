@@ -1,0 +1,1 @@
+sed -i -e "s/version =.*/version = \"$1\"/g" pyproject.toml

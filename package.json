@@ -1,0 +1,28 @@
+{
+  "name": "pyreka",
+  "version": "0.0.0",
+  "description": "python package for discovering python functions",
+  "main": "null",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "pytest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Allaway11/pyreka.git"
+  },
+  "author": "george.w.allaway@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Allaway11/pyreka/issues"
+  },
+  "homepage": "https://github.com/Allaway11/pyreka#readme",
+  "devDependencies": {
+    "@semantic-release/changelog": "^6.0.2",
+    "@semantic-release/exec": "^6.0.3",
+    "@semantic-release/git": "^10.0.1",
+    "semantic-release": "^19.0.5"
+  }
+}
