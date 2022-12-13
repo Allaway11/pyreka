@@ -1,28 +1,33 @@
 [build-system]
-requires = ["setuptools>=61.0"]
+requires = ["setuptools>=61.0", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "python_function_search"
-version = "0.0.0"
+name = "pyreka"
+version = "0.0.0-alpha0"
 authors = [
   { name="George Allaway", email="george.w.allaway@gmail.com" },
 ]
-description = "A small example package"
+description = "Package for finding python functions in codebases and environment packages"
 readme = "README.md"
 requires-python = ">=3.10"
 classifiers = [
+    "Programming Language :: Python",
     "Programming Language :: Python :: 3",
     "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent",
 ]
-
+keywords = ["search", "functions", "finder"]
+dependencies = [
+  "rich==12.6.0",
+  "typer==0.7.0"
+]
 [tool.setuptools]
-packages = ["python_function_search"]
+packages = ["pyreka"]
 
 [project.urls]
 "Homepage" = "https://github.com/Allaway11/python-function-search"
 "Bug Tracker" = "https://github.com/Allaway11/python-function-search/issues"
 
 [project.scripts]
-hello-world = "python_function_search:hello_world"
+hello-world = "pyreka:hello_world"
