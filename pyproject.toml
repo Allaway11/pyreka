@@ -26,8 +26,8 @@ dependencies = [
 packages = ["pyreka"]
 
 [project.urls]
-"Homepage" = "https://github.com/Allaway11/python-function-search"
-"Bug Tracker" = "https://github.com/Allaway11/python-function-search/issues"
+"Homepage" = "https://github.com/Allaway11/pyreka"
+"Bug Tracker" = "https://github.com/Allaway11/pyreka/issues"
 
 [project.scripts]
-hello-world = "pyreka:hello_world"
+pyreka = "pyreka:main"

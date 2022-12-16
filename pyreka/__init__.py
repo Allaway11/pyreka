@@ -121,7 +121,7 @@ def print_top_k_functions(functions: List[dict], k: int = 5):
     console = Console()
     for rank, function in enumerate(functions[:k], start=1):
         print(
-            f"\n:inbox_tray: [bold italic green]Rank {rank} - {function['function_name']} - {function['score']*100:.1f}% match[/]"
+            f"\n:mag: [bold italic green]Rank {rank} - {function['function_name']} - {function['score']*100:.1f}% match[/]"
         )
         print(f":link: {function['file_name']}")
         print(f":pushpin: LineNo: {function['line_number']}")
@@ -129,21 +129,23 @@ def print_top_k_functions(functions: List[dict], k: int = 5):
         # TODO: print 1st line of docstring
         print("\t" + function["docstring"].strip().split("\n")[0])
 
-        res = typer.prompt(
-            "Hit Enter to view docstring", default="^[[C", show_default=False
+        res = Prompt.ask(
+            ":book: Hit Enter to view docstring :leftwards_arrow_with_hook:",
+            default="^[[C",
+            show_default=False,
         )
         if res:
             with console.pager():
                 console.print(f'{function["function_signature"]}:')
                 console.print(f'{function["docstring"]}\n\n')
         Prompt.ask(
-            ":fast_forward: Hit Enter to view next result :fast_forward:",
+            ":fast_forward: Hit Enter to view next result :leftwards_arrow_with_hook:",
             default="\n",
             show_default=False,
         )
 
 
-def main(
+def function_search(
     package_name_or_path: str,
     search_terms: str,
     is_directory: bool = typer.Option(
@@ -161,5 +163,9 @@ def main(
     print_top_k_functions(functions=functions)
 
 
+def main():
+    typer.run(function_search)
+
+
 if __name__ == "__main__":
-    typer.run(main)
+    main()
