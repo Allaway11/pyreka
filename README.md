@@ -1,1 +1,8 @@
-# python-function-search
+# pyreka
+
+![logo](.images/logo.jpeg)
+
+## Installation
+```bash
+pip install pyreka
+```
