@@ -30,4 +30,4 @@ packages = ["pyreka"]
 "Bug Tracker" = "https://github.com/Allaway11/python-function-search/issues"
 
 [project.scripts]
-hello-world = "pyreka:hello_world"
+pyreka = "pyreka:main"
